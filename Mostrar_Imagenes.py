@@ -2,7 +2,6 @@ import requests
 from datetime import datetime, timedelta
 
 api = "KGfUUoaqC6LQhITqUmGnNr1JzWD2MaRUM9LBliz6"
-
 api_url = f"https://api.nasa.gov/planetary/apod?api_key={api}"
 
 def obtener_imagen(enlace):

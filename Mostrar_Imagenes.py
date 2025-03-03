@@ -5,7 +5,6 @@ api = "KGfUUoaqC6LQhITqUmGnNr1JzWD2MaRUM9LBliz6"
 
 api_url = f"https://api.nasa.gov/planetary/apod?api_key={api}"
 
-
 def obtener_imagen(enlace):
     respuesta = requests.get(enlace)
     if respuesta.status_code == 200:
@@ -16,7 +15,6 @@ def obtener_imagen(enlace):
         print(f"linck de la imagen del día:\n{link_de_imagen}")
     else:
         print("Erro no se puede ingresar al api")
-
 
 def obtener_por_fecha():
     while True:
@@ -49,8 +47,7 @@ def obtener_por_fecha():
             print("Formato de fecha invalido ingrese, use el formato año, mes y dia")
             continue
         break
-
-
+        
 def obtener_galeria():
     fecha_act = datetime.today()
     hace_7_dias = fecha_act - timedelta(days=7)
@@ -69,7 +66,6 @@ def obtener_galeria():
             print(f"Link de la imagen: {dia['url']}\n")
     else:
         print("Error no se puede ingresar al API")
-
 
 while True:
     print("Eliga una opccion:")
